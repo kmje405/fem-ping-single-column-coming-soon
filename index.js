@@ -16,6 +16,7 @@ errorMessage.textContent = 'Please provide a valid email address'
 errorMessage.hidden = true
 errorMessage.setAttribute('role', 'alert')
 errorMessage.setAttribute('aria-live', 'polite')
+errorMessage.id = 'email-error'
 
 // Add error message to the wrapper (below input)
 inputWrapper.appendChild(errorMessage)
@@ -32,6 +33,7 @@ email.addEventListener('blur', () => {
   const isValid = emailValue && validateEmail(emailValue)
   
   email.setAttribute('aria-invalid', String(!isValid))
+  email.setAttribute('aria-describedby', isValid ? 'email-help' : 'email-error')
   errorMessage.hidden = isValid
   
   if (!isValid) {
@@ -50,6 +52,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     email.focus()
     email.setAttribute('aria-invalid', 'true')
+    email.setAttribute('aria-describedby', 'email-error')
     errorMessage.hidden = false
     email.classList.add('error')
   }
@@ -60,6 +63,7 @@ email.addEventListener('input', () => {
   if (email.classList.contains('error')) {
     email.classList.remove('error')
     email.setAttribute('aria-invalid', 'false')
+    email.setAttribute('aria-describedby', 'email-help')
     errorMessage.hidden = true
   }
 })

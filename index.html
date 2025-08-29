@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ping coming soon page - Subscribe to get notified when we launch. Stay updated with our latest news and product announcements."
+    />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -17,19 +21,29 @@
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <div class="wrapper">
-      <img class="logo" src="/images/logo.svg" alt="" />
+      <header>
+        <img
+          class="logo"
+          src="/images/logo.svg"
+          alt="Ping logo"
+          width="53"
+          height="15"
+        />
+      </header>
 
-      <main>
+      <main id="main" tabindex="-1">
         <h1 class="text-preset-2-light">
           We are launching <span class="text-preset-2">soon!</span>
         </h1>
         <h2 class="text-preset-4-light">Subscribe and get notified</h2>
+        <p id="email-help" class="visually-hidden">
+          Enter your email address to be notified when we launch
+        </p>
 
         <form action="">
-          <label class="visually-hidden" aria-hidden="true" for="email">
-            email
-          </label>
+          <label class="visually-hidden" for="email"> Email address </label>
           <input
             id="email"
             type="email"
@@ -38,22 +52,32 @@
             autocomplete="email"
             inputmode="email"
             placeholder="Your email address..."
+            aria-describedby="email-help"
+            aria-invalid="false"
           />
-          <button class="text-preset-4">Notify Me</button>
+          <button type="submit" class="text-preset-4">Notify Me</button>
         </form>
 
         <img
           class="main-image"
           src="/images/illustration-dashboard.png"
-          alt=""
+          alt="Dashboard illustration showing analytics charts and graphs"
+          width="640"
+          height="383"
         />
       </main>
 
       <footer class="text-preset-4-light">
         <div class="social-icons">
-          <img src="/images/icon-fb.svg" alt="facebook" />
-          <img src="/images/icon-twitter.svg" alt="twitter" />
-          <img src="/images/icon-ig.svg" alt="instagram" />
+          <a href="#" aria-label="Follow us on Facebook">
+            <img src="/images/icon-fb.svg" alt="" width="20" height="20" />
+          </a>
+          <a href="#" aria-label="Follow us on Twitter">
+            <img src="/images/icon-twitter.svg" alt="" width="20" height="20" />
+          </a>
+          <a href="#" aria-label="Follow us on Instagram">
+            <img src="/images/icon-ig.svg" alt="" width="20" height="20" />
+          </a>
         </div>
         <p>&copy; Copyright Ping. All rights reserved.</p>
       </footer>
