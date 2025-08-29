@@ -104,3 +104,154 @@
   line-height: 1.25;
   letter-spacing: 0px;
 }
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-between;
+  color: var(--c-blue-950);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: clamp(320px, 90vw, calc(712 / 16 * 1rem));
+  position: relative;
+  justify-self: center;
+  margin-top: clamp(2rem, 8vw, calc(84 / 16 * 1rem));
+  min-height: 80vh;
+  border: 1px solid red;
+}
+.wrapper img {
+  max-height: 100vh;
+}
+.logo {
+  width: clamp(40px, 8vw, 60px);
+  align-self: center;
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+h1 {
+  padding-bottom: var(--spacing-100);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Tablet and Desktop - Horizontal Layout */
+@media (width >= 480px) {
+  /* Override mobile typography with larger preset-1 styles */
+  h1.text-preset-2-light {
+    font-family: "Libre Franklin";
+    font-weight: lighter;
+    font-size: calc(48 / 16 * 1rem);
+    line-height: 1.25;
+    letter-spacing: 0px;
+  }
+
+  h1 span.text-preset-2 {
+    font-family: "Libre Franklin";
+    font-weight: bold;
+    font-size: calc(48 / 16 * 1rem);
+    line-height: 1.25;
+    letter-spacing: 0px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    align-items: center;
+    justify-content: center;
+    max-width: clamp(400px, 80vw, 600px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  button {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Large Desktop - Wider Max Width */
+@media (width >= 1024px) {
+  form {
+    max-width: clamp(500px, 50vw, 700px);
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+}
+input {
+  border: 1px solid var(--c-blue-200);
+  height: 2.5rem;
+  border-radius: calc(28 / 16 * 1rem);
+  width: clamp(280px, 80vw, calc(282 / 16 * 1rem));
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(0.25rem, 1vw, 0.5rem);
+  padding: 0 1rem;
+}
+
+@media (width < 480px) {
+  input {
+    align-self: center;
+  }
+}
+input::placeholder {
+  color: var(--c-blue-200);
+}
+input,
+button {
+  box-sizing: border-box;
+}
+button {
+  padding: 0.75rem;
+  width: clamp(280px, 80vw, calc(282 / 16 * 1rem));
+  border-radius: calc(28 / 16 * 1rem);
+  border: none;
+  color: var(--c-white);
+  background-color: var(--c-blue-500);
+  box-shadow: 0 2px 10px 2px var(--c-blue-200);
+  height: 2.5rem;
+}
+
+@media (width < 480px) {
+  button {
+    align-self: center;
+  }
+}
+.main-image {
+  padding-block: clamp(2rem, 6vw, 5rem) clamp(0rem, 2vw, 1rem);
+  max-width: clamp(calc(319 / 16 * 1rem), 70vw, calc(640 / 16 * 1rem));
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  justify-self: center;
+  margin-block: 3rem 1rem;
+  color: var(--c-gray-400);
+}
+.social-icons {
+  align-self: center;
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
