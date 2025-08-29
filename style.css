@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Libre Franklin";
+  src: url(./fonts/LibreFranklin-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Franklin Italic";
+  src: url(./fonts/LibreFranklin-Italic-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  --c-white: hsl(0 0% 100%);
+  --c-black: hsl(0 0% 0%);
+  --c-blue-950: hsl(209 33% 12%);
+  --c-blue-500: hsl(223 87% 63%);
+  --c-blue-200: hsl(223 100% 88%);
+  --c-gray-400: hsl(0 0% 59%);
+  --c-gray-100: hsl(0 0% 92%);
+  --c-gray-50: hsl(225 100% 99%);
+  --c-red-400: hsl(354 100% 66%);
+  --c-green-500: hsl(145 63% 49%);
+}
+
+.text-preset-1 {
+  font-family: "Libre Franklin";
+  font-weight: bold;
+  font-size: calc(48 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-1-light {
+  font-family: "Libre Franklin";
+  font-weight: lighter;
+  font-size: calc(48 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-2 {
+  font-family: "Libre Franklin";
+  font-weight: bold;
+  font-size: calc(20 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-2-light {
+  font-family: "Libre Franklin";
+  font-weight: lighter;
+  font-size: calc(20 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-3 {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+  font-size: calc(16 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-3-light {
+  font-family: "Libre Franklin";
+  font-weight: lighter;
+  font-size: calc(16 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-4 {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+  font-size: calc(12 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-4-light {
+  font-family: "Libre Franklin";
+  font-weight: lighter;
+  font-size: calc(12 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-4-italic {
+  font-family: "Libre Franklin Italic";
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(12 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
+.text-preset-5-italic {
+  font-family: "Libre Franklin Italic";
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(10 / 16 * 1rem);
+  line-height: 1.25;
+  letter-spacing: 0px;
+}
