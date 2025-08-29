@@ -22,6 +22,14 @@
   --c-gray-50: hsl(225 100% 99%);
   --c-red-400: hsl(354 100% 66%);
   --c-green-500: hsl(145 63% 49%);
+
+  --spacing-0: 0px;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
 }
 
 .text-preset-1 {
